@@ -1,10 +1,3 @@
-//
-//  YNewsViewController.m
-//  YNews
-//
-//  Created by yaakov gamliel on 7/22/13.
-//  Copyright (c) 2013 yaakov gamliel. All rights reserved.
-//
 
 #import "YNewsViewController.h"
 #import "YNewsCell.h"

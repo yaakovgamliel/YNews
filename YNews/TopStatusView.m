@@ -1,10 +1,3 @@
-//
-//  TopStatusView.m
-//  Recordify
-//
-//  Created by yaakov gamliel on 7/8/13.
-//  Copyright (c) 2013 yaakov gamliel. All rights reserved.
-//
 
 #import "TopStatusView.h"
 #import "FlatUIKit.h"
