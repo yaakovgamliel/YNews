@@ -1,0 +1,116 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="2.0" toolsVersion="3084" systemVersion="12E55" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" initialViewController="11a-i3-8p6">
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="2083"/>
+    </dependencies>
+    <scenes>
+        <!--News View Controller - News-->
+        <scene sceneID="hhn-q2-gxa">
+            <objects>
+                <tableViewController id="LOG-Mb-7WH" customClass="YNewsViewController" sceneMemberID="viewController">
+                    <tableView key="view" opaque="NO" clipsSubviews="YES" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" rowHeight="99" sectionHeaderHeight="22" sectionFooterHeight="22" id="4Fz-MF-7Fh">
+                        <rect key="frame" x="0.0" y="64" width="320" height="504"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <prototypes>
+                            <tableViewCell contentMode="scaleToFill" selectionStyle="gray" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="newsCell" rowHeight="100" id="HEy-aL-lw6" customClass="YNewsCell">
+                                <rect key="frame" x="0.0" y="22" width="320" height="100"/>
+                                <autoresizingMask key="autoresizingMask"/>
+                                <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
+                                    <rect key="frame" x="0.0" y="0.0" width="320" height="99"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                    <subviews>
+                                        <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="Title" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" preferredMaxLayoutWidth="307" translatesAutoresizingMaskIntoConstraints="NO" id="TG4-Ny-Bef">
+                                            <constraints>
+                                                <constraint firstAttribute="height" constant="56" id="KNZ-vZ-sv4"/>
+                                                <constraint firstAttribute="width" constant="307" id="fp0-XH-5oh"/>
+                                            </constraints>
+                                            <fontDescription key="fontDescription" name="HelveticaNeue-Light" family="Helvetica Neue" pointSize="17"/>
+                                            <color key="textColor" red="0.39007302989130432" green="0.39007302989130432" blue="0.39007302989130432" alpha="1" colorSpace="calibratedRGB"/>
+                                            <color key="highlightedColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                        </label>
+                                        <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="user" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="rU4-5C-mbi">
+                                            <constraints>
+                                                <constraint firstAttribute="height" constant="21" id="4qj-sd-WEy"/>
+                                                <constraint firstAttribute="width" constant="112" id="ADu-Za-NM7"/>
+                                            </constraints>
+                                            <fontDescription key="fontDescription" name="HelveticaNeue-Light" family="Helvetica Neue" pointSize="12"/>
+                                            <color key="textColor" red="0.50019106657608692" green="0.50019106657608692" blue="0.50019106657608692" alpha="1" colorSpace="calibratedRGB"/>
+                                            <color key="highlightedColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                        </label>
+                                        <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="time ago" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ijt-m5-xp8">
+                                            <constraints>
+                                                <constraint firstAttribute="width" constant="69" id="85C-O7-BVb"/>
+                                                <constraint firstAttribute="height" constant="21" id="uoI-4N-TNy"/>
+                                            </constraints>
+                                            <fontDescription key="fontDescription" name="HelveticaNeue-Light" family="Helvetica Neue" pointSize="12"/>
+                                            <color key="textColor" red="0.50350288722826086" green="0.50350288722826086" blue="0.50350288722826086" alpha="1" colorSpace="calibratedRGB"/>
+                                            <color key="highlightedColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                        </label>
+                                    </subviews>
+                                    <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                </view>
+                                <constraints>
+                                    <constraint firstAttribute="bottom" secondItem="ijt-m5-xp8" secondAttribute="bottom" constant="9" id="A7y-sP-qND"/>
+                                    <constraint firstItem="TG4-Ny-Bef" firstAttribute="leading" secondItem="HEy-aL-lw6" secondAttribute="leading" constant="6" id="EX1-ca-hej"/>
+                                    <constraint firstAttribute="bottom" secondItem="rU4-5C-mbi" secondAttribute="bottom" constant="10" id="TR9-Fs-k52"/>
+                                    <constraint firstItem="rU4-5C-mbi" firstAttribute="leading" secondItem="TG4-Ny-Bef" secondAttribute="leading" type="default" id="gGG-Ke-ZCs"/>
+                                    <constraint firstItem="TG4-Ny-Bef" firstAttribute="top" secondItem="HEy-aL-lw6" secondAttribute="top" type="default" id="oXd-gp-qky"/>
+                                    <constraint firstAttribute="trailing" secondItem="ijt-m5-xp8" secondAttribute="trailing" constant="8" id="xhO-7G-kSg"/>
+                                </constraints>
+                                <connections>
+                                    <outlet property="autorLable" destination="rU4-5C-mbi" id="HyH-FL-UEq"/>
+                                    <outlet property="time" destination="ijt-m5-xp8" id="erW-ST-zKh"/>
+                                    <outlet property="titleLable" destination="TG4-Ny-Bef" id="Ney-hq-YIe"/>
+                                </connections>
+                            </tableViewCell>
+                        </prototypes>
+                        <connections>
+                            <outlet property="dataSource" destination="LOG-Mb-7WH" id="cDI-br-4NE"/>
+                            <outlet property="delegate" destination="LOG-Mb-7WH" id="Fum-K5-QmL"/>
+                        </connections>
+                    </tableView>
+                    <navigationItem key="navigationItem" title="News" id="1Wr-q2-WjD"/>
+                </tableViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dWd-Cu-RV6" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-205" y="-38"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="9zD-24-ybM">
+            <objects>
+                <navigationController definesPresentationContext="YES" id="11a-i3-8p6" sceneMemberID="viewController">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="Ipc-fi-WeW">
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <connections>
+                        <segue destination="LOG-Mb-7WH" kind="relationship" relationship="rootViewController" id="wmg-En-ii7"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="47i-Rq-GF4" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-555" y="14"/>
+        </scene>
+    </scenes>
+    <classes>
+        <class className="NSLayoutConstraint" superclassName="NSObject">
+            <source key="sourceIdentifier" type="project" relativePath="./Classes/NSLayoutConstraint.h"/>
+        </class>
+        <class className="YNewsCell" superclassName="UITableViewCell">
+            <source key="sourceIdentifier" type="project" relativePath="./Classes/YNewsCell.h"/>
+            <relationships>
+                <relationship kind="outlet" name="autorLable" candidateClass="UILabel"/>
+                <relationship kind="outlet" name="time" candidateClass="UILabel"/>
+                <relationship kind="outlet" name="titleLable" candidateClass="UILabel"/>
+            </relationships>
+        </class>
+        <class className="YNewsViewController" superclassName="UITableViewController">
+            <source key="sourceIdentifier" type="project" relativePath="./Classes/YNewsViewController.h"/>
+        </class>
+    </classes>
+    <simulatedMetricsContainer key="defaultSimulatedMetrics">
+        <simulatedStatusBarMetrics key="statusBar"/>
+        <simulatedOrientationMetrics key="orientation"/>
+        <simulatedScreenMetrics key="destination" type="retina4"/>
+    </simulatedMetricsContainer>
+</document>

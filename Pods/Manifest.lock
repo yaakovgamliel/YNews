@@ -1,0 +1,22 @@
+PODS:
+  - AFNetworking (1.3.1)
+  - FlatUIKit (1.2)
+  - PocketAPI (1.0.2)
+  - SVProgressHUD (0.9)
+  - SVPullToRefresh (0.4.1)
+
+DEPENDENCIES:
+  - AFNetworking
+  - FlatUIKit
+  - PocketAPI
+  - SVProgressHUD
+  - SVPullToRefresh
+
+SPEC CHECKSUMS:
+  AFNetworking: 9ec8aafb9269236a7630bd8d9838ce2ba30fa2a0
+  FlatUIKit: 43b2acaa6f4ef57539b51b00e4ce62d506e33e11
+  PocketAPI: 2ed51391e6ea7a48c707528f782f5a2cb0eab80e
+  SVProgressHUD: 03d4845ec8e64591726428a08236c6a5489d45f8
+  SVPullToRefresh: 61a0e4bd12bd6f8e3465909810b0fbeb1a28d5f2
+
+COCOAPODS: 0.22.2

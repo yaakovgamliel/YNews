@@ -1,26 +1,25 @@
 //
-//  AppDelegate.m
-//  YNews
+//  SVAppDelegate.m
+//  SVPullToRefreshDemo
 //
-//  Created by yaakov gamliel on 7/22/13.
-//  Copyright (c) 2013 yaakov gamliel. All rights reserved.
+//  Created by Sam Vermette on 23.04.12.
+//  Copyright (c) 2012 samvermette.com. All rights reserved.
 //
 
-#import "AppDelegate.h"
-#import "PocketAPI.h"
+#import "SVAppDelegate.h"
 
+#import "SVRootViewController.h"
 
-@implementation AppDelegate
+@implementation SVAppDelegate
+
+@synthesize window = _window;
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions
 {
-    
-    [[PocketAPI sharedAPI] setConsumerKey:@"16853-885d460cc57455adf4046c56"];
-
-    
-    [[UINavigationBar appearance]setBackgroundImage:[UIImage imageNamed:@"nav-background"] forBarMetrics:UIBarMetricsDefault];
-    
-    [[UIBarButtonItem appearance]setBackgroundImage:[UIImage imageNamed:@"nav-back-mini"] forState:UIControlStateNormal style:UIBarButtonItemStylePlain barMetrics:UIBarMetricsDefault];
+    self.window = [[UIWindow alloc] initWithFrame:[[UIScreen mainScreen] bounds]];
+    // Override point for customization after application launch.
+    self.window.rootViewController = [[UINavigationController alloc] initWithRootViewController:[[SVRootViewController alloc] initWithNibName:@"SVRootViewController" bundle:nil]];
+    [self.window makeKeyAndVisible];
     return YES;
 }
 
@@ -28,20 +27,6 @@
 {
     // Sent when the application is about to move from active to inactive state. This can occur for certain types of temporary interruptions (such as an incoming phone call or SMS message) or when the user quits the application and it begins the transition to the background state.
     // Use this method to pause ongoing tasks, disable timers, and throttle down OpenGL ES frame rates. Games should use this method to pause the game.
-}
-
--(BOOL)application:(UIApplication *)application
-           openURL:(NSURL *)url
- sourceApplication:(NSString *)sourceApplication
-        annotation:(id)annotation{
-    
-    if([[PocketAPI sharedAPI] handleOpenURL:url]){
-        return YES;
-    }else{
-        // if you handle your own custom url-schemes, do it here
-        return NO;
-    }
-    
 }
 
 - (void)applicationDidEnterBackground:(UIApplication *)application
