@@ -32,11 +32,16 @@
     
     [self loadNews];
     
+    __weak YNewsViewController  *weekSelf = self;
+    
     [self.tableView addPullToRefreshWithActionHandler:^{
         // prepend data to dataSource, insert cells at top of table view
         // call [tableView.pullToRefreshView stopAnimating] when done
-        [self loadNews];
-        [self.tableView.pullToRefreshView stopAnimating];
+        
+        __strong YNewsViewController  *strongSelf = weekSelf;
+        
+        [strongSelf loadNews];
+        [strongSelf.tableView.pullToRefreshView stopAnimating];
     }];
     
 }
