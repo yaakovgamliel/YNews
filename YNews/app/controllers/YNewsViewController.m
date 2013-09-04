@@ -32,16 +32,16 @@
     
     [self loadNews];
     
-   // __weak YNewsViewController  *weekSelf = self;
+   __weak YNewsViewController  *weekSelf = self;
     
     [self.tableView addPullToRefreshWithActionHandler:^{
         // prepend data to dataSource, insert cells at top of table view
         // call [tableView.pullToRefreshView stopAnimating] when done
         
-        //__strong YNewsViewController  *strongSelf = weekSelf;
+        __strong YNewsViewController  *strongSelf = weekSelf;
         
-        [self loadNews];
-        [self.tableView.pullToRefreshView stopAnimating];
+        [strongSelf loadNews];
+        [strongSelf.tableView.pullToRefreshView stopAnimating];
     }];
     
 }
@@ -177,7 +177,7 @@
 
 -(void)loadNews {
     
-   // [SVProgressHUD show];
+    [SVProgressHUD show];
 
     NSURL *url = [NSURL URLWithString:@"http://node-hnapi.herokuapp.com/news"];
     NSURLRequest *request = [NSURLRequest requestWithURL:url];
@@ -193,7 +193,7 @@
         
         _results = _weGotThis;
         
-      //  [SVProgressHUD dismiss];
+        [SVProgressHUD dismiss];
         [self.tableView reloadData];
         
     }failure:nil];
