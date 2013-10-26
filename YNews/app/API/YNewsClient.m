@@ -1,10 +1,9 @@
-
 #import "YNewsClient.h"
 #import "News.h"
 #import "AFJSONRequestOperation.h"
 #import "SVProgressHUD.h"
 
-#define BeersAPIBaseURLString @"http://node-hnapi.herokuapp.com"
+#define BeersAPIBaseURLString @"http://aqueous-oasis-1132.herokuapp.com"
 
 @implementation YNewsClient
 
